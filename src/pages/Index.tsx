@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import LandingPage from '@/components/LandingPage';
-import AuthModal from '@/components/AuthModal';
-import SlotMachine from '@/components/SlotMachine';
-import DepositModal from '@/components/DepositModal';
+import LandingPage from '../components/LandingPage';
+import AuthModal from '../components/AuthModal';
+import SlotMachine from '../components/SlotMachine';
+import DepositModal from '../components/DepositModal';
 
 interface User {
   name: string;
