@@ -13,7 +13,7 @@ interface SlotMachineProps {
     currency: string;
   };
   balance: number;
-  setBalance: (balance: number) => void;
+  setBalance: (update: number | ((prevBalance: number) => number)) => void;
   onLogout: () => void;
 }
 
