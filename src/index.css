@@ -1,0 +1,92 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Casino-themed design system */
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 43 100% 92%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 43 100% 92%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 43 100% 92%;
+
+    --primary: 43 100% 65%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 72% 25%;
+    --secondary-foreground: 43 100% 92%;
+
+    --muted: 0 0% 16%;
+    --muted-foreground: 43 20% 70%;
+
+    --accent: 0 72% 45%;
+    --accent-foreground: 43 100% 92%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 43 100% 65%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-gray-900 via-red-900 to-black text-foreground;
+    font-family: 'Georgia', serif;
+  }
+}
+
+/* Custom casino animations */
+@keyframes slot-spin {
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-300%); }
+}
+
+@keyframes gold-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes reel-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+}
+
+.slot-spin {
+  animation: slot-spin 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gold-text {
+  background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 3s linear infinite;
+}
+
+.reel-glow {
+  animation: reel-glow 2s ease-in-out infinite;
+}
+
+.casino-gradient {
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a0000 50%, #000000 100%);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+}
